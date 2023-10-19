@@ -3,6 +3,7 @@ var app = express();
 var port = 3000; // error thi doi port
 var expressLayouts = require("express-ejs-layouts");//goi thu vien layout
 var nodemailer = require("nodemailer");
+var IP = require('ip');
 
 app.use(express.static("public"));//duong dan den thu muc public
 app.use(express.json());
@@ -12,6 +13,10 @@ app.use(expressLayouts);//chay trang co ten layout
 app.set("view engine", "ejs"); //duoi mo rong ejs
 app.set("views", "./views"); //thu muc view
 app.listen(port);
+
+app.get('/', function(req, res){
+ 
+});
 
 //duong dan trang chu
 app.get("/", function (req, res) {
